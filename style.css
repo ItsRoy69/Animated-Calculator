@@ -1,0 +1,114 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(rgb(17, 16, 20), rgb(12, 7, 12));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-y: hidden;
+}
+body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(228, 18, 228) , #00FF00);
+    clip-path: circle(35% at right 65%);
+}
+body::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(83, 10, 218), #00FF00);
+    clip-path: circle(35% at left 65%);
+}
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(106, 98, 167, 0.123);
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+    border-radius: 15px;
+    z-index: 10;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0,2);
+    border-top: 1px solid rgba(252, 252, 255, 0.233);
+    border-left: 1px solid rgba(253, 253, 253, 0.233);
+
+
+}
+
+.container .calculator{
+    display: grid;
+    position: relative;
+
+}
+
+.container .calculator .answer{
+    background-color: transparent;
+    height:100px ;
+    width:300px;
+    height: 150px;
+    padding: 10px;
+    font-size: 2rem;
+    grid-column: span 4;
+    text-align: right;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    color: white;
+    border-bottom: 1px solid rgba(140, 140, 141, 0.048);
+    border-right: 1px solid rgba(140, 140, 141, 0.048);
+
+
+}
+.container .calculator span{
+    color: white;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    padding: 20px;
+    border-bottom: 1px solid rgba(140, 140, 141, 0.048);
+    border-right: 1px solid rgba(140, 140, 141, 0.048);
+    transition: 0.5s;
+    user-select: none;
+
+}
+
+.container .calculator span:hover{
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.041);
+
+}
+.container .calculator span:active{
+    background: rgba(58, 248, 0, 0.993);
+    color: rgb(6, 29, 1);
+    font-weight: 900;
+    font-size: 1.24rem;
+
+
+
+
+}
+
+.container .calculator .clear{
+    grid-column: span 2;
+}
+
+.container .calculator .plus{
+    grid-row: span 2;
+}
